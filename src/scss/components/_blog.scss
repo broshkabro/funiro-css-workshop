@@ -1,0 +1,88 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+.blog {
+  padding-block: $sp-16;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $sp-6;
+    margin-bottom: $sp-10;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__dots {
+    @include flex(row, center, center, $sp-2);
+  }
+}
+
+// ── Blog card ─────────────────────────────────────────
+.blog-card {
+  background: $clr-white;
+  border-radius: $radius-md;
+  overflow: hidden;
+  transition: box-shadow $tr-base, transform $tr-base;
+
+  &:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform $tr-slow;
+  }
+
+  &:hover &__img {
+    transform: scale(1.04);
+  }
+
+  &__body {
+    padding: $sp-6;
+  }
+
+  &__meta {
+    font-size: $fs-xs;
+    color: $clr-light;
+    margin-bottom: $sp-2;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: $fs-base;
+    color: $clr-dark;
+    margin-bottom: $sp-3;
+    line-height: 1.4;
+    @include truncate(2);
+  }
+
+  &__link {
+    @include flex(row, center, flex-start, $sp-2);
+    font-size: $fs-sm;
+    font-weight: 600;
+    color: $clr-dark;
+    transition: color $tr-base;
+    width: fit-content;
+
+    &::after {
+      content: '→';
+      transition: transform $tr-base;
+    }
+
+    &:hover {
+      color: $clr-primary;
+
+      &::after {
+        transform: translateX(4px);
+      }
+    }
+
+    @include focus-ring;
+  }
+}
