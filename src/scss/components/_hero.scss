@@ -1,0 +1,134 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+.hero {
+  background: #fcf8f3;
+  overflow: hidden;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+    align-items: center;
+  }
+
+  // ── Content (left) ──────────────────────────────
+  &__content {
+    padding: $sp-12 $sp-8 $sp-12 0;
+    max-width: 480px;
+  }
+
+  &__eyebrow {
+    font-size: $fs-xs;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $clr-primary;
+    margin-bottom: $sp-3;
+  }
+
+  &__title {
+    @include fluid-type(2rem, 3.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: $clr-dark;
+    margin-bottom: $sp-4;
+  }
+
+  &__desc {
+    color: $clr-mid;
+    font-size: $fs-base;
+    max-width: 380px;
+    margin-bottom: $sp-8;
+  }
+
+  // ── Media (right) ───────────────────────────────
+  &__media {
+    position: relative;
+    height: 100%;
+    min-height: 420px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__dots {
+    @include flex(row, center, flex-start, $sp-2);
+    position: absolute;
+    top: $sp-6;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  &__arrows {
+    @include flex(row, center, flex-start, $sp-2);
+    position: absolute;
+    top: $sp-6;
+    right: $sp-6;
+  }
+
+  // ── Floating product card ───────────────────────
+  &__card {
+    @include flex(row, center, space-between, $sp-4);
+    position: absolute;
+    bottom: $sp-8;
+    left: $sp-6;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: $radius-md;
+    padding: $sp-4 $sp-6;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+  }
+
+  &__card-name {
+    font-weight: 600;
+    font-size: $fs-base;
+    color: $clr-dark;
+  }
+
+  &__card-sub {
+    font-size: $fs-xs;
+    color: $clr-light;
+  }
+
+  &__card-price {
+    font-weight: 700;
+    color: $clr-primary;
+    font-size: $fs-base;
+    margin-top: $sp-1;
+  }
+
+  &__card-arrow {
+    @include flex(row, center, center);
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $clr-primary;
+    color: $clr-white;
+    flex-shrink: 0;
+  }
+}
+
+// ── Responsive ──────────────────────────────────────
+@media (max-width: 1024px) {
+  .hero {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      padding-right: 0;
+      max-width: 100%;
+      padding-block: $sp-10;
+    }
+
+    &__media {
+      min-height: 340px;
+    }
+  }
+}

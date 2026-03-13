@@ -1,0 +1,85 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+// ── Section titles ────────────────────────────────────
+.section-title {
+  @include fluid-type(1.5rem, 2.25rem);
+  font-weight: 700;
+  text-align: center;
+  color: $clr-dark;
+  margin-bottom: $sp-3;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: $clr-light;
+  max-width: 500px;
+  margin-inline: auto;
+  margin-bottom: $sp-10;
+  font-size: $fs-sm;
+}
+
+// ── Buttons ───────────────────────────────────────────
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: $fs-sm;
+  border-radius: $radius-sm;
+  transition: background $tr-base, color $tr-base, transform $tr-base;
+  @include focus-ring;
+
+  &--primary {
+    background: $clr-primary;
+    color: $clr-white;
+
+    &:hover {
+      background: $clr-primary-lt;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid $clr-primary;
+    color: $clr-primary;
+
+    &:hover {
+      background: $clr-primary;
+      color: $clr-white;
+    }
+  }
+}
+
+// ── Carousel dots ─────────────────────────────────────
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: $radius-full;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all $tr-base;
+
+  &--active {
+    background: $clr-primary;
+    width: 24px;
+    border-radius: 5px;
+  }
+}
+
+// ── Arrow buttons ─────────────────────────────────────
+.arrow-btn {
+  @include flex(row, center, center);
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-full;
+  border: 1.5px solid #ccc;
+  color: $clr-mid;
+  transition: background $tr-base, color $tr-base, border-color $tr-base;
+
+  &--active,
+  &:hover {
+    background: $clr-primary;
+    color: $clr-white;
+    border-color: $clr-primary;
+  }
+}

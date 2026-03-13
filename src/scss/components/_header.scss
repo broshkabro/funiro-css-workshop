@@ -1,0 +1,130 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $clr-white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+  &__inner {
+    @include flex(row, center, space-between, $sp-6);
+    padding-block: $sp-4;
+  }
+
+  // ── Logo ──────────────────────────────────────
+  &__logo {
+    font-family: $ff-heading;
+    font-size: $fs-lg;
+    font-weight: 700;
+    color: $clr-dark;
+    letter-spacing: -0.02em;
+    @include focus-ring;
+
+    span { color: $clr-primary; }
+  }
+
+  // ── Search ────────────────────────────────────
+  &__search {
+    @include flex(row, center, flex-start, $sp-2);
+    flex: 0 1 360px;
+    background: $clr-bg;
+    border: 1px solid $clr-border;
+    padding: 0.4rem 1rem;
+    transition: border-color $tr-base;
+
+    &:focus-within {
+      border-color: $clr-primary;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: $fs-sm;
+      color: $clr-dark;
+
+      &:focus { outline: none; }
+      &::placeholder { color: $clr-light; }
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: $clr-light;
+    }
+  }
+
+  // ── Icon buttons ──────────────────────────────
+  &__icons {
+    @include flex(row, center, flex-start, $sp-4);
+  }
+}
+
+// ── Nav ───────────────────────────────────────────
+.nav {
+  &__list {
+    @include flex(row, center, flex-start, $sp-8);
+  }
+
+  &__item a {
+    position: relative;
+    font-weight: 500;
+    font-size: $fs-base;
+    color: $clr-dark;
+    padding-bottom: 2px;
+    transition: color $tr-base;
+    @include focus-ring;
+
+    // Animated underline
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $clr-primary;
+      transition: width $tr-base;
+    }
+
+    &:hover {
+      color: $clr-primary;
+      &::after { width: 100%; }
+    }
+  }
+}
+
+// ── Icon button (shared) ──────────────────────────
+.icon-btn {
+  @include flex(row, center, center);
+  width: 38px;
+  height: 38px;
+  border-radius: $radius-full;
+  color: $clr-dark;
+  transition: background $tr-base, color $tr-base;
+  @include focus-ring;
+
+  &:hover {
+    background: $clr-card-bg;
+    color: $clr-primary;
+  }
+}
+
+// ── Hamburger (mobile only) ───────────────────────
+.nav-toggle {
+  display: none;
+}
+
+// ── Responsive ───────────────────────────────────
+@include respond-to(md) {
+  .nav-toggle { display: none; }
+}
+
+@media (max-width: 768px) {
+  .nav { display: none; }
+
+  .header__search { display: none; }
+
+  .nav-toggle { display: flex; }
+}

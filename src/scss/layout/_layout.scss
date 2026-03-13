@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+.container {
+  width: 90%;
+  max-width: $container-max;
+  margin-inline: auto;
+}
+
+// Utility: visually hidden
+.sr-only {
+  @include sr-only;
+}

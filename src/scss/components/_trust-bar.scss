@@ -1,0 +1,50 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
+.trust-bar {
+  background: $clr-white;
+  border-top: 1px solid $clr-border;
+  border-bottom: 1px solid $clr-border;
+  padding-block: $sp-6;
+
+  &__list {
+    @include flex(row, center, space-between, $sp-6);
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include flex(row, center, flex-start, $sp-4);
+  }
+
+  &__icon {
+    @include flex(row, center, center);
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    color: $clr-dark;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: $fs-base;
+    color: $clr-dark;
+  }
+
+  &__sub {
+    font-size: $fs-xs;
+    color: $clr-light;
+  }
+}
+
+// ── Responsive ──────────────────────────────────────
+@media (max-width: 768px) {
+  .trust-bar__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

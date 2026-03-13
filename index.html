@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funiro – High-Quality Furniture Just For You</title>
+    <script type="module" src="src/js/main.js"></script>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div class="container header__inner">
+
+        <a href="/" class="header__logo" aria-label="Funiro Home">Funiro<span>.</span></a>
+
+        <nav class="nav" id="main-nav" aria-label="Primary navigation">
+          <ul class="nav__list" role="list">
+            <li class="nav__item"><a href="#" aria-current="page">Home</a></li>
+            <li class="nav__item"><a href="#products">Products</a></li>
+            <li class="nav__item"><a href="#rooms">Rooms</a></li>
+            <li class="nav__item"><a href="#blog">Inspirations</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__search" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" placeholder="Search for minimal chair…" aria-label="Search products" />
+        </div>
+
+        <div class="header__icons">
+          <a href="#" class="icon-btn" aria-label="Wishlist">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </a>
+          <a href="#" class="icon-btn" aria-label="Shopping cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </a>
+          <a href="#" class="icon-btn" aria-label="Account">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </a>
+          <button class="nav-toggle icon-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Hero banner">
+        <div class="container hero__inner">
+
+          <div class="hero__content">
+            <p class="hero__eyebrow">New Arrival</p>
+            <h1 class="hero__title">High-Quality Furniture Just For You</h1>
+            <p class="hero__desc">Our furniture is made from selected and best quality materials that are suitable for your dream home.</p>
+            <a href="#products" class="btn btn--primary">Shop Now</a>
+          </div>
+
+          <div class="hero__media" role="img" aria-label="Stylish living room with a teal sofa">
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&auto=format&fit=crop&q=80"
+              alt="Bohauss luxury sofa in a bright minimal living room"
+              loading="eager" width="800" height="520"
+            />
+            <div class="hero__dots" aria-hidden="true">
+              <span class="dot dot--active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="hero__arrows" aria-hidden="true">
+              <button class="arrow-btn" tabindex="-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button class="arrow-btn arrow-btn--active" tabindex="-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+            <div class="hero__card">
+              <div>
+                <p class="hero__card-name">Bohauss</p>
+                <p class="hero__card-sub">Luxury big sofa 2-seat</p>
+                <p class="hero__card-price">Rp 17.000.000</p>
+              </div>
+              <div class="hero__card-arrow" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="trust-bar" aria-labelledby="trust-heading">
+        <h2 id="trust-heading" class="sr-only">Our commitments</h2>
+        <div class="container">
+          <ul class="trust-bar__list" role="list">
+            <li class="trust-bar__item">
+              <div class="trust-bar__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 4.8 5.3.77-3.85 3.75.91 5.28L12 14.25l-4.76 2.5.91-5.28L4.3 7.57l5.3-.77z"/></svg>
+              </div>
+              <div>
+                <p class="trust-bar__label">High Quality</p>
+                <p class="trust-bar__sub">Crafted from top materials</p>
+              </div>
+            </li>
+            <li class="trust-bar__item">
+              <div class="trust-bar__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <p class="trust-bar__label">Warranty Protection</p>
+                <p class="trust-bar__sub">Over 2 years</p>
+              </div>
+            </li>
+            <li class="trust-bar__item">
+              <div class="trust-bar__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div>
+                <p class="trust-bar__label">Free Shipping</p>
+                <p class="trust-bar__sub">Orders over 150$</p>
+              </div>
+            </li>
+            <li class="trust-bar__item">
+              <div class="trust-bar__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.66 11.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.57 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.55 6.55l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="trust-bar__label">24 / 7 Support</p>
+                <p class="trust-bar__sub">Dedicated support</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="products" id="products" aria-labelledby="products-heading">
+        <div class="container">
+          <h2 class="section-title" id="products-heading">Our Products</h2>
+          <p class="section-subtitle">Explore our curated collection of handcrafted furniture.</p>
+
+          <div class="products__grid">
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1567538096621-38d2284b23ff?w=400&auto=format&fit=crop&q=80" alt="Syltherine stylish café chair" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Syltherine</h3>
+                <p class="product-card__type">Stylish café chair</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 2.500.000</span>
+                  <span class="product-card__original">Rp 3.500.000</span>
+                </div>
+              </div>
+              <span class="badge badge--sale" aria-label="30% off">-30%</span>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&auto=format&fit=crop&q=80" alt="Leviosa stylish sofa chair" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Leviosa</h3>
+                <p class="product-card__type">Stylish sofa chair</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 2.500.000</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=400&auto=format&fit=crop&q=80" alt="Lolito luxury big sofa" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Lolito</h3>
+                <p class="product-card__type">Luxury big sofa</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 7.000.000</span>
+                  <span class="product-card__original">Rp 14.000.000</span>
+                </div>
+              </div>
+              <span class="badge badge--sale" aria-label="50% off">-50%</span>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1495433324511-bf8e92934d90?w=400&auto=format&fit=crop&q=80" alt="Respira minimal fan" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Respira</h3>
+                <p class="product-card__type">Minimal fan</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 500.000</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1585128719715-46776b56a0d1?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Grifo night lamp" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Grifo</h3>
+                <p class="product-card__type">Night lamp</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 1.500.000</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&auto=format&fit=crop&q=80" alt="Muggo small mug" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Muggo</h3>
+                <p class="product-card__type">Small mug</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 150.000</span>
+                </div>
+              </div>
+              <span class="badge badge--new" aria-label="New">New</span>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&auto=format&fit=crop&q=80" alt="Pingky cute bed set" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Pingky</h3>
+                <p class="product-card__type">Cute bed set</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 7.000.000</span>
+                  <span class="product-card__original">Rp 14.000.000</span>
+                </div>
+              </div>
+              <span class="badge badge--sale" aria-label="50% off">-50%</span>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1673980556346-410de9c88368?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Potty minimal flower pot" width="400" height="400" loading="lazy" />
+              </div>
+              <div class="product-card__overlay" aria-hidden="true">
+                <button class="product-card__overlay-btn">Add to cart</button>
+                <div class="product-card__overlay-icons">
+                  <span class="product-card__overlay-icon">Share</span>
+                  <span class="product-card__overlay-icon">Like</span>
+                </div>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Potty</h3>
+                <p class="product-card__type">Minimal flower pot</p>
+                <div class="product-card__pricing">
+                  <span class="product-card__price">Rp 500.000</span>
+                </div>
+              </div>
+              <span class="badge badge--new" aria-label="New">New</span>
+            </article>
+
+          </div>
+
+          <div class="products__cta">
+            <a href="#" class="btn btn--outline">Show More</a>
+          </div>
+        </div>
+      </section>
+      <section class="inspiration" id="rooms" aria-labelledby="inspiration-heading">
+        <div class="container inspiration__inner">
+
+          <div class="inspiration__content">
+            <p class="inspiration__eyebrow">Explore</p>
+            <h2 class="inspiration__title" id="inspiration-heading">50+ Beautiful rooms inspiration</h2>
+            <p class="inspiration__desc">Our designer already made a lot of beautiful prototype of rooms that inspire you.</p>
+            <a href="#" class="btn btn--primary">Explore More</a>
+          </div>
+
+          <div class="inspiration__media">
+            <div class="inspiration__slider" aria-label="Room inspiration carousel">
+              <div class="room-card">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop&q=80" alt="Bedroom – Inner Peace" width="600" height="320" loading="lazy" />
+                <div class="room-card__label">
+                  <p class="room-card__num">01 — Bed Room</p>
+                  <p class="room-card__name">Inner Peace</p>
+                </div>
+              </div>
+              <div class="room-card" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&auto=format&fit=crop&q=80" alt="Dining Room – Natural Light" width="600" height="320" loading="lazy" />
+                <div class="room-card__label">
+                  <p class="room-card__num">02 — Dining Room</p>
+                  <p class="room-card__name">Natural Light</p>
+                </div>
+              </div>
+            </div>
+            <div class="inspiration__dots" aria-hidden="true">
+              <span class="dot dot--active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =============================================
+           BLOG / TIPS & TRICKS
+      ============================================= -->
+      <section class="blog" id="blog" aria-labelledby="blog-heading">
+        <div class="container">
+          <h2 class="section-title" id="blog-heading">Tips &amp; Tricks</h2>
+          <p class="section-subtitle">Find design ideas and inspiration to style your home with confidence.</p>
+
+          <div class="blog__grid">
+            <article class="blog-card">
+              <img class="blog-card__img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop&q=80" alt="Cosy living room" width="600" height="200" loading="lazy" />
+              <div class="blog-card__body">
+                <p class="blog-card__meta">16 Jun 2023</p>
+                <h3 class="blog-card__title">How to create a living room to love</h3>
+                <a href="#" class="blog-card__link">Read More</a>
+              </div>
+            </article>
+            <article class="blog-card">
+              <img class="blog-card__img" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&auto=format&fit=crop&q=80" alt="Minimal home office" width="600" height="200" loading="lazy" />
+              <div class="blog-card__body">
+                <p class="blog-card__meta">13 Jun 2023</p>
+                <h3 class="blog-card__title">Solution for clean look working space</h3>
+                <a href="#" class="blog-card__link">Read More</a>
+              </div>
+            </article>
+            <article class="blog-card">
+              <img class="blog-card__img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&auto=format&fit=crop&q=80" alt="Modern kitchen" width="600" height="200" loading="lazy" />
+              <div class="blog-card__body">
+                <p class="blog-card__meta">10 Jun 2023</p>
+                <h3 class="blog-card__title">Make your cooking activity more fun with good setup</h3>
+                <a href="#" class="blog-card__link">Read More</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="blog__dots" aria-hidden="true">
+            <span class="dot dot--active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+      <section class="gallery" aria-labelledby="gallery-heading">
+        <div class="container">
+          <p class="gallery__hashtag">Share your setup with</p>
+          <h2 class="gallery__title" id="gallery-heading">#FuniroFurniture</h2>
+          <div class="gallery__grid" role="list">
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=400&auto=format&fit=crop&q=80" alt="Customer living room" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&auto=format&fit=crop&q=80" alt="Cosy bedroom" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=400&auto=format&fit=crop&q=80" alt="Dining area" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&auto=format&fit=crop&q=80" alt="Modern kitchen" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&auto=format&fit=crop&q=80" alt="Reading nook" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1505409628601-edc9af17fda6?w=400&auto=format&fit=crop&q=80" alt="Living room corner" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1526040652367-ac003a0475fe?w=400&auto=format&fit=crop&q=80" alt="Guest bedroom" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&auto=format&fit=crop&q=80" alt="Open plan lounge" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=400&auto=format&fit=crop&q=80" alt="Home office" loading="lazy" /></div>
+            <div class="gallery__item" role="listitem"><img src="https://images.unsplash.com/photo-1524758870432-af57e54afa26?w=400&auto=format&fit=crop&q=80" alt="Entryway" loading="lazy" /></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+
+          <div class="footer__brand">
+            <p class="footer__brand-name">Funiro<span>.</span></p>
+            <p class="footer__brand-desc">Worldwide furniture store since 2020. We sell over 1000+ branded products around the world.</p>
+            <address class="footer__address">
+              <span>Tirtayasa Maklong, Bandung</span>
+              <a href="tel:+62881234568">(+628) 234 568</a>
+              <a href="http://www.funiro.cy">www.funiro.cy</a>
+            </address>
+          </div>
+
+          <nav aria-label="Footer menu">
+            <h3 class="footer__heading">Menu</h3>
+            <ul class="footer__nav" role="list">
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Rooms</a></li>
+              <li><a href="#">Inspirations</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Account">
+            <h3 class="footer__heading">Account</h3>
+            <ul class="footer__nav" role="list">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li><a href="#">My Cart</a></li>
+              <li><a href="#">My Catalog</a></li>
+              <li><a href="#">Terms &amp; Policy</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Social media">
+            <h3 class="footer__heading">Stay Connected</h3>
+            <ul class="footer__nav" role="list">
+              <li><a href="#" rel="noopener">Facebook</a></li>
+              <li><a href="#" rel="noopener">Instagram</a></li>
+              <li><a href="#" rel="noopener">Twitter</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__newsletter-col">
+            <h3 class="footer__heading">Stay Updated</h3>
+            <div class="footer__newsletter">
+              <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+              <button type="button" aria-label="Subscribe">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2024 Funiro. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
